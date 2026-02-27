@@ -1,0 +1,129 @@
+# Конфигурация плагина Collections
+
+settings:
+  # Автосохранение данных (в минутах)
+  auto-save: 5
+
+  # Максимальный уровень коллекций
+  max-level: 15
+
+messages:
+  prefix: "§8[§6Коллекции§8] §r"
+  no-permission: "§cУ вас нет прав для этого!"
+  level-up: "§a✦ Вы достигли {level} уровня в коллекции {collection}!"
+  rewards-received: "§a✦ Вы получили награды: {rewards}"
+
+# Настройки коллекций
+collections:
+  mining:
+    enabled: true
+    icon: GOLDEN_PICKAXE
+    name: "§6⛏ Майнинг"
+
+    # Блоки и требования к уровням
+    blocks:
+      DEEPSLATE:
+        name: "§7Глубинный сланец"
+        base-requirement: 1
+        increment: 15
+      COBBLESTONE:
+        name: "§8Булыжник"
+        base-requirement: 1
+        increment: 15
+      IRON_ORE:
+        name: "§7Железная руда"
+        base-requirement: 5
+        increment: 20
+      COPPER_ORE:
+        name: "§6Медная руда"
+        base-requirement: 5
+        increment: 20
+      GOLD_ORE:
+        name: "§6Золотая руда"
+        base-requirement: 10
+        increment: 25
+      LAPIS_ORE:
+        name: "§9Лазуритовая руда"
+        base-requirement: 10
+        increment: 25
+      REDSTONE_ORE:
+        name: "§cРедстоун руда"
+        base-requirement: 10
+        increment: 25
+      DIAMOND_ORE:
+        name: "§bАлмазная руда"
+        base-requirement: 20
+        increment: 50
+      EMERALD_ORE:
+        name: "§aИзумрудная руда"
+        base-requirement: 20
+        increment: 50
+      ANCIENT_DEBRIS:
+        name: "§5Древний обломок"
+        base-requirement: 50
+        increment: 100
+      NETHERRACK:
+        name: "§4Незерак"
+        base-requirement: 1
+        increment: 10
+      END_STONE:
+        name: "§eЭндстоун"
+        base-requirement: 5
+        increment: 20
+      MAGMA_BLOCK:
+        name: "§6Магма блок"
+        base-requirement: 10
+        increment: 25
+      GLOWSTONE:
+        name: "§eГлоустоун"
+        base-requirement: 10
+        increment: 25
+      AMETHYST_BLOCK:
+        name: "§dАметист"
+        base-requirement: 15
+        increment: 30
+      OBSIDIAN:
+        name: "§5Обсидиан"
+        base-requirement: 20
+        increment: 40
+      SAND:
+        name: "§eПесок"
+        base-requirement: 1
+        increment: 10
+      ICE:
+        name: "§bЛёд"
+        base-requirement: 5
+        increment: 15
+      PACKED_ICE:
+        name: "§bПлотный лёд"
+        base-requirement: 10
+        increment: 25
+      GRAVEL:
+        name: "§8Гравий"
+        base-requirement: 1
+        increment: 10
+      NETHER_QUARTZ_ORE:
+        name: "§fНезер кварц"
+        base-requirement: 5
+        increment: 20
+
+# Будущие коллекции (заглушки)
+farming:
+  enabled: false
+  icon: WHEAT
+  name: "§a🌾 Ферма"
+
+woodcutting:
+  enabled: false
+  icon: OAK_LOG
+  name: "§6🪓 Рубка"
+
+fishing:
+  enabled: false
+  icon: FISHING_ROD
+  name: "§9🎣 Рыбалка"
+
+hunting:
+  enabled: false
+  icon: BOW
+  name: "§c🏹 Охотник"

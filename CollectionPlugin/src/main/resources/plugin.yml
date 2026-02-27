@@ -1,0 +1,17 @@
+name: Collections
+version: '${version}'
+main: com.example.collections.CollectionPlugin
+api-version: '1.21'
+author: YourName
+description: Система коллекций с прокачкой
+
+commands:
+  collections:
+    description: Открыть меню коллекций
+    aliases: [col, collection]
+    usage: /collections
+
+permissions:
+  collections.admin:
+    description: Права администратора коллекций
+    default: op
