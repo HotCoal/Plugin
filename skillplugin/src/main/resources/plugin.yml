@@ -1,0 +1,29 @@
+name: SkillPlugin
+version: 1.0.0
+main: com.skillplugin.SkillPlugin
+api-version: "1.21"
+author: YourName
+description: Плагин навыков с интеграцией коллекций
+soft-depend: [Vault, LuckPerms]
+
+commands:
+  menu:
+    description: Открыть главное меню
+    usage: /menu
+    aliases: [skills]
+
+permissions:
+  skillplugin.*:
+    description: Все права плагина
+    default: op
+    children:
+      skillplugin.use: true
+      skillplugin.collections: true
+
+  skillplugin.use:
+    description: Доступ к навыкам
+    default: true
+
+  skillplugin.collections:
+    description: Доступ к коллекциям
+    default: true
