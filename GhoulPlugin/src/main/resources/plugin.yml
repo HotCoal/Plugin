@@ -1,0 +1,24 @@
+name: GhoulPlugin
+version: 1.0.0
+main: com.example.ghoulplugin.GhoulPlugin
+api-version: '1.21'
+author: YourName
+description: Custom Ghoul mobs plugin
+
+commands:
+  spawnmenu:
+    description: Open spawn eggs menu
+    usage: /spawnmenu
+    permission: ghoulplugin.spawnmenu
+  ghoulreload:
+    description: Reload plugin configuration
+    usage: /ghoulreload
+    permission: ghoulplugin.reload
+
+permissions:
+  ghoulplugin.spawnmenu:
+    description: Allow to open spawn menu
+    default: op
+  ghoulplugin.reload:
+    description: Allow to reload config
+    default: op

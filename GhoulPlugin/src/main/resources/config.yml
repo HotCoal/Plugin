@@ -1,0 +1,129 @@
+# Ghoul Plugin Configuration
+
+# Настройки спавна для каждого моба
+mob-spawn-settings:
+  ghoul:
+    enabled: true
+    worlds:
+      - "world"
+      - "world_nether"
+      - "world_the_end"
+    biomes:
+      - "minecraft:plains"
+      - "minecraft:forest"
+      - "minecraft:dark_forest"
+      - "minecraft:swamp"
+      - "minecraft:taiga"
+    min-y-level: 0
+    max-y-level: 256
+    spawn-frequency: 600
+    spawn-chance: 0.4
+    chunk-radius:
+      radius: 4
+      max-mobs-in-radius: 3
+    spawn-conditions:
+      light-level: "any"
+      can-burn-in-daylight: false
+      require-player-nearby: true
+      min-players-nearby: 1
+      player-distance: 30
+      require-darkness: false
+      darkness-level: 7
+
+  elocator:
+    enabled: true
+    worlds:
+      - "world"
+      - "world_the_end"
+    biomes:
+      - "minecraft:end_highlands"
+      - "minecraft:end_midlands"
+      - "minecraft:end_barrens"
+      - "minecraft:small_end_islands"
+    min-y-level: 0
+    max-y-level: 256
+    spawn-frequency: 1200
+    spawn-chance: 0.3
+    chunk-radius:
+      radius: 6
+      max-mobs-in-radius: 2
+    spawn-conditions:
+      light-level: "any"
+      can-burn-in-daylight: false
+      require-player-nearby: true
+      min-players-nearby: 1
+      player-distance: 50
+      require-darkness: false
+      darkness-level: 7
+
+  skinwalker:
+    enabled: true
+    worlds:
+      - "world"
+      - "world_nether"
+    biomes:
+      - "minecraft:dark_forest"
+      - "minecraft:swamp"
+      - "minecraft:nether_wastes"
+      - "minecraft:soul_sand_valley"
+    min-y-level: 0
+    max-y-level: 128
+    spawn-frequency: 900
+    spawn-chance: 0.2
+    chunk-radius:
+      radius: 5
+      max-mobs-in-radius: 1
+    spawn-conditions:
+      light-level: "night"
+      can-burn-in-daylight: true
+      require-player-nearby: true
+      min-players-nearby: 1
+      player-distance: 40
+      require-darkness: true
+      darkness-level: 4
+
+# Настройки мобов (здоровье, урон и т.д.)
+mob-settings:
+  ghoul:
+    health: 30.0
+    damage: 4.0
+    effects:
+      poison-duration: 200
+      nausea-duration: 300
+
+  elocator:
+    health: 60.0
+    damage-radius: 3.0
+    siren-radius: 10.0
+    damage-per-second: 3.0
+    blindness-duration: 100
+
+  skinwalker:
+    health: 100.0
+    damage-per-second: 4.0  # 4 ХП в секунду (2 сердца)
+    grab-range: 2.0
+    weakness-duration: 600
+    speed: 0.35
+    carrying-speed: 0.09
+
+# Настройки дропа с мобов
+drops:
+  ghoul:
+    - material: "ROTTEN_FLESH"
+      min-amount: 1
+      max-amount: 3
+      chance: 0.7
+    - material: "BONE"
+      min-amount: 1
+      max-amount: 2
+      chance: 0.3
+    - material: "IRON_NUGGET"
+      min-amount: 1
+      max-amount: 3
+      chance: 0.1
+
+  skinwalker:
+    - material: "BONE"
+      min-amount: 20
+      max-amount: 20
+      chance: 1.0

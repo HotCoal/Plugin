@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+}
+
+dependencies {
+    compileOnly "io.papermc.paper:paper-api:1.21.5-R0.1-SNAPSHOT"
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+}
+
+tasks {
+    compileJava {
+        options.encoding = "UTF-8"
+        options.release.set(21)
+    }
+
+    processResources {
+        filteringCharset = 'UTF-8'
+        filesMatching('plugin.yml') {
+            expand(version: project.version)
+        }
+    }
+
+    jar {
+        archiveBaseName.set("GhoulPlugin")
+        archiveVersion.set(project.version.toString())
+
+        // ⬇️ ДОБАВЬТЕ ЭТУ СТРОКУ
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+        manifest {
+            attributes(
+                    'Implementation-Title': project.name,
+                    'Implementation-Version': project.version
+            )
+        }
+
+        from(sourceSets.main.resources)
+    }
+}

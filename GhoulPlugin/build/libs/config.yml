@@ -1,0 +1,103 @@
+# Ghoul Plugin Configuration
+
+# Настройки спавна для каждого моба
+mob-spawn-settings:
+  ghoul:
+    enabled: true
+    worlds:
+      - "world"
+      - "world_nether"
+      - "world_the_end"
+    biomes:
+      - "minecraft:plains"
+      - "minecraft:forest"
+      - "minecraft:dark_forest"
+      - "minecraft:swamp"
+      - "minecraft:taiga"
+    min-y-level: 50
+    max-y-level: 180
+    spawn-frequency: 300  # в тиках (20 тиков = 1 секунда)
+    spawn-chance: 0.5  # шанс спавна при каждой попытке (0.0 - 1.0)
+
+    # Настройки спавна в чанках вокруг игрока
+    chunk-radius:
+      radius: 3  # радиус чанков от игрока (0 = только чанк игрока, 1 = 3x3 чанков, 2 = 5x5 и т.д.)
+      max-mobs-in-radius: 15  # максимальное количество мобов во всем радиусе
+
+    spawn-conditions:
+      light-level: "night"  # "day", "night", "any"
+      can-burn-in-daylight: true
+      require-player-nearby: true
+      min-players-nearby: 1
+      require-darkness: false
+      darkness-level: 7  # максимальный уровень света для спавна (0-15)
+
+  elocator:
+    enabled: true
+    worlds:
+      - "world"
+      - "world_the_end"
+    biomes:
+      - "minecraft:end_highlands"
+      - "minecraft:end_midlands"
+      - "minecraft:end_barrens"
+      - "minecraft:small_end_islands"
+    min-y-level: 0
+    max-y-level: 256
+    spawn-frequency: 400  # раз в минуту
+    spawn-chance: 0.2
+    chunk-radius:
+      radius: 3
+      max-mobs-in-radius: 1
+    spawn-conditions:
+      light-level: "any"
+      can-burn-in-daylight: false
+      require-player-nearby: true
+      min-players-nearby: 1
+
+  skinwalker:
+    enabled: true
+    worlds:
+      - "world"
+      - "world_nether"
+    biomes:
+      - "minecraft:dark_forest"
+      - "minecraft:plains"
+      - "minecraft:swamp"
+      - "minecraft:nether_wastes"
+      - "minecraft:soul_sand_valley"
+    min-y-level: 60
+    max-y-level: 128
+    spawn-frequency: 90  # раз в 45 секунд
+    spawn-chance: 1
+    chunk-radius:
+      radius: 2
+      max-mobs-in-radius: 1
+    spawn-conditions:
+      light-level: "night"
+      can-burn-in-daylight: true
+      require-player-nearby: true
+      min-players-nearby: 1
+      require-darkness: true
+      darkness-level: 4
+
+drops:
+  ghoul:
+    - material: "ROTTEN_FLESH"
+      min-amount: 1
+      max-amount: 3
+      chance: 0.7
+    - material: "BONE"
+      min-amount: 1
+      max-amount: 2
+      chance: 0.3
+    - material: "IRON_NUGGET"
+      min-amount: 1
+      max-amount: 3
+      chance: 0.1
+
+  skinwalker:
+    - material: "BONE"
+      min-amount: 20
+      max-amount: 20
+      chance: 1.0
